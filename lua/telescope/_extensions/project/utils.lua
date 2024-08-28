@@ -7,6 +7,8 @@ M.telescope_projects_file = vim.fn.stdpath('data') .. '/telescope-projects.txt'
 -- The file path to telescope workspaces
 M.telescope_workspaces_file = vim.fn.stdpath('data') .. '/telescope-workspaces.txt'
 
+M.project_project_root = nil
+
 -- Initialize file if does not exist
 M.init_files = function()
   local projects_file_path = Path:new(M.telescope_projects_file)
@@ -159,11 +161,16 @@ M.change_project_dir = function(project_path, cd_scope)
       M.open_in_nvim_tree(project_path)
     end
 
+    M.project_project_root = project_path
     return true
   else
     print("The path '" .. project_path .. "' does not exist")
     return false
   end
+end
+
+M.get_project_dir = function()
+  return "/Users/tony/.tmux"
 end
 
 -- Normalize the base_dirs configurations
