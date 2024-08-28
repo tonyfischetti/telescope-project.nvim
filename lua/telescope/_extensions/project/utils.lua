@@ -169,10 +169,6 @@ M.change_project_dir = function(project_path, cd_scope)
   end
 end
 
-M.get_project_dir = function()
-  return "/Users/tony/.tmux"
-end
-
 -- Normalize the base_dirs configurations
 M.normalize_base_dir_configs = function(base_dirs)
   local normalize_path = function(dir)
