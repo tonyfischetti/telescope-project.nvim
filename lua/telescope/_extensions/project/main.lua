@@ -78,16 +78,6 @@ M.project = function(opts)
       map('i', '<c-d>', _actions.delete_project)
       map('i', '<c-r>', _actions.rename_project)
       map('i', '<c-p>', _actions.add_project)
-      -- map('i', '<c-A>', _actions.add_project_cwd)
-      -- map('i', '<c-f>', _actions.find_project_files)
-      -- map('i', '<c-b>', _actions.browse_project_files)
-      -- map('i', '<c-s>', _actions.search_in_project_files)
-      -- map('i', '<c-r>', _actions.recent_project_files)
-      -- map('i', '<c-l>', _actions.change_working_directory)
-      -- map('i', '<c-o>', _actions.next_cd_scope)
-
-      -- Workspace key mappings
-      -- map('i', '<c-w>', _actions.change_workspace)
 
       local handler = function()
         if on_project_selected then
